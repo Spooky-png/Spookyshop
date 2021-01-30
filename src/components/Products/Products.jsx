@@ -5,8 +5,8 @@ import Product from './Product/Product';
 import useStyles from './styles';
 
 const products = [
-    { id: 1, name: 'Shoes', description: 'Running shoes.', price: '$5', image: 'https://cnet3.cbsistatic.com/img/VKmy0taw5V9f5iwiDsYgCVa5AS0=/940x528/2020/11/06/c2991e77-c9ab-433a-b73d-98be38b30421/mizuno.jpg' },
-    { id: 2, name: 'Macbook', description: 'Apple Macbook.', price: '$10', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPeM9l1WIJiPqhzeLkeTWG8towrOwvkbMHgfSooTgftfDR8RQ_C9t9_sS0bA&usqp=CAc' },
+    { id: 1, name: 'Skeletons', description: 'Spooky skellingtons.', price: '$5', image:'https://clippings-me-blog.imgix.net/blog/wp-content/uploads/2019/12/skeleton-2-1.jpg?auto=format%2Cenhance%2Ccompress&w=1024&h=1024' },
+    { id: 2, name: 'Bats', description: 'Bats are also spooky.', price: '$10', image: 'https://i.pinimg.com/originals/e4/c8/1d/e4c81db283638cd33d5404861ffa5ac5.jpg' },
 ]
 
 const Products = () => {
