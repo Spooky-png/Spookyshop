@@ -3,7 +3,7 @@ import React from 'react'
 const PaymentForm = () => {
     return (
         <div>
-            PaymentForm
+           This is the payment form. There are many like it but this one is mine.
         </div>
     );
 }
