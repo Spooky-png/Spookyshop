@@ -43,7 +43,7 @@ const AddressForm = ({ checkoutToken, next }) => {
         console.log(options[0]);
         console.log(Object.keys(options[0].id));
     };
-    {/* HOW FIX /*}
+    {/* HOW FIX one more day and then we move on/*}
 
     useEffect(() => {
         fetchShippingCountries(checkoutToken.id)
