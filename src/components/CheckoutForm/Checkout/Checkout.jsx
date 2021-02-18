@@ -68,4 +68,4 @@ const Checkout = ({ cart }) => {
     )
 }
 
-export default Checkout
+export default Checkout;

@@ -13,4 +13,4 @@ const PaymentForm = ({checkoutToken}) => {
     );
 }
 
-export default PaymentForm
+export default PaymentForm;
