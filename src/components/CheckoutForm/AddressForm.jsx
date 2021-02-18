@@ -35,7 +35,7 @@ const AddressForm = ({ checkoutToken, next }) => {
     
         setShippingOptions(options);
         setShippingOption(options[0].id);
-    {/*this bug will be the death of me */}
+    {/*this bug IS THE death of me */}
       };
 
 
