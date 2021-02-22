@@ -35,7 +35,6 @@ const AddressForm = ({ checkoutToken, next }) => {
     
         setShippingOptions(options);
         setShippingOption(options[0].id);
-    {/* Quit my job today. This is it. */}
       };
 
 
