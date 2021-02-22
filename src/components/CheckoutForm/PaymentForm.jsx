@@ -5,7 +5,7 @@ import { loadStripe } from '@stripe/stripe-js';
 
 import Review from './Review';
 
-const stripePromise = loadStripe('process.env.REACT_APP_STRIPE_PUBLIC_KEY');
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 const PaymentForm = ({checkoutToken, shippingData, backStep, nextStep, onCaptureCheckout}) => {
     const handleSubmit =  async (event, elements, stripe) => {
@@ -18,10 +18,10 @@ const PaymentForm = ({checkoutToken, shippingData, backStep, nextStep, onCapture
         const { error, paymentMethod } = await stripe.createPaymentMethod({ type: 'card', card: cardElement});
 
         if(error) {
-            console.log(error);
+            console.log('[error]',error);
         } else {
             const orderData = {
-                list_items: checkoutToken.live.line_items,
+                line_items: checkoutToken.live.line_items,
                 customer: { firstname: shippingData.firstName, lastname: shippingData.lastName, email: shippingData.email},
                 shipping: { 
                     name: 'Primary', 
@@ -43,10 +43,8 @@ const PaymentForm = ({checkoutToken, shippingData, backStep, nextStep, onCapture
             onCaptureCheckout(checkoutToken.id, orderData);
 
             nextStep();
-
-
         }
-    }
+    };
     return (
         <>
             <Review checkoutToken={checkoutToken}/>
@@ -54,7 +52,7 @@ const PaymentForm = ({checkoutToken, shippingData, backStep, nextStep, onCapture
             <Typography variant="h6" gutterBottom style={{ margin: '20px 0'}}>Payment method</Typography>
             <Elements stripe={stripePromise}>
                     <ElementsConsumer>
-                        {( elements, stripe) => (
+                        {( {elements, stripe}) => (
                             <form onSubmit={(e) => handleSubmit(e, elements, stripe)}>
                                 <CardElement />
                                 <br /> <br />
@@ -70,6 +68,6 @@ const PaymentForm = ({checkoutToken, shippingData, backStep, nextStep, onCapture
             </Elements>
         </>
     );
-}
+};
 
 export default PaymentForm;
