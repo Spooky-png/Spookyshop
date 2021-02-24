@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { commerce } from '../../lib/commerce';
 import FormInput from './CustomTextField';
-{/*minor bug fixes and deployment prep?*/}
+{/*my heart hurts am I dying*/}
 
 const AddressForm = ({ checkoutToken, next }) => {
     const [shippingCountries, setShippingCountries] = useState([]);
